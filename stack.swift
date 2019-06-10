@@ -22,11 +22,13 @@ class Stack<T>{
         self.head = newNode
     }
 
-    func pop(){//don't return value, i need fix this bug
+    func pop() -> Node<T>?{//don't return value, i need fix this bug
         if let temp = self.head{
             self.head = temp.previous
+            return temp
         }else{
             print("UnderFlow error")
+            return nil
         }
     }
 
