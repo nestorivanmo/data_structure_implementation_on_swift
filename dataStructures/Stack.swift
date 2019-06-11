@@ -12,19 +12,19 @@ class Node<T>{
 }
 
 class Stack<T>{
-    var head: Node<T>?
+    var top: Node<T>?
 
     func push(_ value: T){
         let newNode = Node<T>(value);
-        if let head = self.head{//has more that one node
-            newNode.previous = head
+        if let top = self.top{//has more that one node
+            newNode.previous = top
         }
-        self.head = newNode
+        self.top = newNode
     }
 
     func pop() -> Node<T>?{//don't return value, i need fix this bug
-        if let temp = self.head{
-            self.head = temp.previous
+        if let temp = self.top{
+            self.top = temp.previous
             return temp
         }else{
             print("UnderFlow error")
@@ -33,7 +33,7 @@ class Stack<T>{
     }
 
     func printStack(){
-        if var aux = self.head{
+        if var aux = self.top{
             while true {
                 print(aux.value)
                 guard let previous = aux.previous else { return }//this break the code
