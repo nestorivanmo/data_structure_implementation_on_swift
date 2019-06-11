@@ -1,3 +1,5 @@
+//Carlos Daniel Hernandez Chauteco 2019
+//Note: Run on linux(Ubuntu) swift 5.0.1
 func BinarySearch(_ list: Array<Int>, _ key: Int, _ begin: Int, _ end: Int) -> Int{
 	if begin >= 0 {
 		let middle = begin + (end - 1)/2 //get the middle of the list
