@@ -48,6 +48,7 @@ func main(){
     stack.push("Carlos")
     stack.push("Oscar")
     stack.push("Gerardo")
+    stack.push("Néstor")
     stack.printStack()
     print("*******************************")
     stack.pop()
